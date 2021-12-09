@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+<form action="#" th:action="@{/users/}" th:object="${User}" method="post"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+    <h1 align="center">Registration Form</h1>
+    <table border="2" align="center">
+        <tr>
+            <td><label th:text="#{User.name}" />Name</td>
+            <td><input type="text" th:field="*{name}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.password}" />Password</td>
+            <td><input type="text" th:field="*{password}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.address}" />Address</td>
+            <td><input type="text" th:field="*{address}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.email}" />Email</td>
+            <td><input type="text" th:field="*{email}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.phone}" />Phone</td>
+            <td><input type="text" th:field="*{phone}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.uploadPhoto}" />Upload Photo</td>
+            <td><input type="text" th:field="*{uploadPhoto}" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

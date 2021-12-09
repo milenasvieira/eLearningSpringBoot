@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+<form action="#" th:action="@{/}" th:object="${Feedback}" method="post"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+    <h1 align="center">Feedback Form</h1>
+    <table border="2" align="center">
+        <tr>
+            <td><label th:text="#{User.userId}" />UserId</td>
+            <td><input type="text" th:field="*{userId}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.name}" />Name</td>
+            <td><input type="text" th:field="*{name}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.email}" />Email</td>
+            <td><input type="text" th:field="*{email}" /></td>
+        </tr>
+        <tr>
+            <td><label th:text="#{msg.feedback}" />Feedback</td>
+            <td><input type="text" th:field="*{feedback}" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
